@@ -11,7 +11,7 @@ const HomeBlog = () => {
       <GlobalTitle title={"موضة تناسبك"} subtitle={"من المدونة"} />
 
       <Swiper
-        modules={[ Autoplay]}
+        modules={[Autoplay]}
         loop={true}
         autoplay={{ delay: 2000 }}
         className="mySwiper"
@@ -34,6 +34,7 @@ const HomeBlog = () => {
           <SwiperSlide key={index}>
             <div className="mb-2 relative">
               <img
+                loading="lazy"
                 src={blogImg}
                 alt=""
                 className="w-full h-full object-cover"

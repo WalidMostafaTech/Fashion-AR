@@ -6,6 +6,7 @@ const BlogItem = ({ blog }) => {
     <Link className="space-y-2 group">
       <div className="relative h-48 lg:h-64 overflow-hidden">
         <img
+          loading="lazy"
           src={blog.image}
           alt={blog.title}
           className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"

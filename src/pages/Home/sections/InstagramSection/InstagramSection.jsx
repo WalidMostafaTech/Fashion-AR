@@ -33,6 +33,7 @@ const InstagramSection = () => {
           <SwiperSlide key={index}>
             <div className="relative h-52 group cursor-pointer">
               <img
+                loading="lazy"
                 src={instaImg}
                 alt=""
                 className="w-full h-full object-cover"

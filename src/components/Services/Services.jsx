@@ -21,14 +21,16 @@ const Services = () => {
     },
   ];
   return (
-    <section className="container py-12 border-y border-gray-200">
+    <section className="container sectionPadding border-y border-gray-200">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {servicesList.map((service, index) => (
           <div
             key={index}
             className="flex items-center justify-center gap-4 lg:not-last:border-e border-gray-200 p-6 group"
           >
-            <span className="text-7xl text-main-clr group-hover:scale-120 duration-300">{service.icon}</span>
+            <span className="text-7xl text-main-clr group-hover:scale-120 duration-300">
+              {service.icon}
+            </span>
             <div>
               <h3 className="text-lg font-semibold">{service.title}</h3>
               <p className=" text-gray-600">{service.description}</p>

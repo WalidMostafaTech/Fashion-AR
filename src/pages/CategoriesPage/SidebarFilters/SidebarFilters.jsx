@@ -1,5 +1,6 @@
 import { MdDone } from "react-icons/md";
 import FilterAccordion from "./FilterAccordion";
+import SideBarContainer from "../../../components/modals/SideBarContainer";
 
 const categories = ["الموضة", "الأثاث", "الكتب", "الخضروات", "الحقائب"];
 const brands = [
@@ -11,16 +12,16 @@ const brands = [
 ];
 const colors = ["أزرق", "أخضر", "أحمر", "بيج", "أسود"];
 
-export default function SidebarFilters() {
-  return (
-    <aside className="lg:w-auto col-span-1 bg-gray-50 p-4 space-y-4 text-sm sticky lg:top-4">
+export default function SidebarFilters({ openFilters, setOpenFilters }) {
+  const sideFilter = (
+    <aside className="bg-gray-100 p-4 space-y-4 sticky lg:top-4 overflow-y-auto">
       <FilterAccordion title="الفئات">
         {categories.map((item, i) => (
           <label key={i} className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
               className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
-                        peer-checked:bg-main-clr transition-colors"
+                    peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
@@ -37,7 +38,7 @@ export default function SidebarFilters() {
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
               className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
-                        peer-checked:bg-main-clr transition-colors"
+                    peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
@@ -54,7 +55,7 @@ export default function SidebarFilters() {
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
               className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
-                        peer-checked:bg-main-clr transition-colors"
+                    peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
@@ -75,11 +76,11 @@ export default function SidebarFilters() {
             />
             <div
               className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
-                    peer-checked:bg-main-clr transition-colors"
+                peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
-            <div className="flex items-center gap-1 text-sm font-semibold">
+            <div className="flex items-center gap-1 font-semibold">
               {[...Array(5)].map((_, j) => (
                 <span
                   key={j}
@@ -103,5 +104,20 @@ export default function SidebarFilters() {
         />
       </FilterAccordion>
     </aside>
+  );
+
+  return (
+    <>
+      <div className="hidden lg:block">{sideFilter}</div>
+      <div className="block lg:hidden">
+        <SideBarContainer
+          title={`التصفية`}
+          openSideBar={openFilters}
+          setOpenSideBar={setOpenFilters}
+        >
+          {sideFilter}
+        </SideBarContainer>
+      </div>
+    </>
   );
 }

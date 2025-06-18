@@ -1,6 +1,6 @@
 const ProductTap = () => {
   return (
-    <section className="container py-8">
+    <section className="container sectionPadding">
       <div className="border border-gray-200">
         <div className="bg-gray-100 p-4 flex items-center gap-2">
           <h3 className="text-lg font-medium bg-main-clr text-white p-2 cursor-pointer">

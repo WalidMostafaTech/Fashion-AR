@@ -18,12 +18,25 @@
 }
 
 @layer components {
+  .sectionPadding {
+    @apply py-4 lg:py-8
+  }
+
   .nav-link {
-    @apply text-lg lg:text-xl duration-300 ease-in-out;
+    @apply text-xl font-medium duration-300 ease-in-out border-b border-gray-200 pb-2 lg:pb-0 lg:border-b-0;
 
     &.active,
     &:hover {
       @apply text-main-clr;
+    }
+  }
+
+  .mainBtn {
+    @apply bg-main-clr text-white text-lg text-center font-semibold px-6 py-2 border border-main-clr transition cursor-pointer;
+
+    &.active,
+    &:hover {
+      @apply bg-white text-main-clr;
     }
   }
 }
@@ -36,4 +49,6 @@
 
 body {
   font-family: "Tajawal", serif;
+  background-color: var(--bg-clr);
+  color: var(--text-clr);
 }

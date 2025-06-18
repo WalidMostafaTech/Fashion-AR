@@ -24,43 +24,14 @@ const CategoriesPage = () => {
         ]}
       />
 
-      <section className="container py-8 grid lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <div className="hidden lg:block">
-          <SidebarFilters />
-        </div>
-
-        <div
-          className={`fixed z-40 top-0 start-0 w-full h-screen bg-black/30 transition-opacity duration-300 lg:hidden ${
-            openFilters ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
-          onClick={() => setOpenFilters(false)}
-        >
-          <div
-            className={`w-10/12 sm:w-[300px] h-full flex flex-col bg-gray-50 duration-300 ${
-              openFilters
-                ? "translate-x-0"
-                : "translate-x-full"
-            }`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <h2 className="text-xl font-bold">تصفية المنتجات</h2>
-              <button
-                className="text-2xl"
-                onClick={() => setOpenFilters(false)}
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="overflow-y-auto flex-1 p-1">
-              <SidebarFilters />
-            </div>
-          </div>
-        </div>
+      <section className="container sectionPadding grid lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <SidebarFilters
+          openFilters={openFilters}
+          setOpenFilters={setOpenFilters}
+        />
 
         <div className="lg:col-span-2 xl:col-span-3 space-y-4">
-          <img src={bannerImg} alt="" />
+          <img loading="lazy" src={bannerImg} alt="" />
 
           <button
             onClick={() => setOpenFilters(true)}

@@ -4,7 +4,7 @@ import Footer from "./components/layouts/Footer/Footer";
 
 function App() {
   return (
-    <main>
+    <main className="flex flex-col min-h-screen">
       <Header />
       <Outlet />
       <Footer />

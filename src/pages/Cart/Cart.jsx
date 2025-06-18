@@ -1,39 +1,9 @@
 import BreadCrumb from "../../components/common/BreadCrumb";
-import ProductImg1 from "../../assets/images/product1.png";
-import ProductImg2 from "../../assets/images/product2.png";
-import ProductImg3 from "../../assets/images/product3.png";
 import { Link } from "react-router-dom";
+import { cartProducts } from "../../data/data";
 
 const Cart = () => {
-  const cartItems = [
-    {
-      id: 1,
-      name: "مقدد برتقالي",
-      price: 15.0,
-      quantity: 1,
-      image: ProductImg1,
-      discount: null,
-    },
-    {
-      id: 2,
-      name: "ذرت كارجرتان",
-      price: 9.96,
-      quantity: 3,
-      image: ProductImg2,
-      originalPrice: 12.0,
-      discount: "وفر: 2.04$",
-    },
-    {
-      id: 3,
-      name: "مقدد رياضي (ابي)",
-      price: 20.0,
-      quantity: 5,
-      image: ProductImg3,
-      discount: null,
-    },
-  ];
-
-  const total = cartItems.reduce(
+  const total = cartProducts.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
@@ -48,7 +18,7 @@ const Cart = () => {
         ]}
       />
 
-      <section className="container py-8">
+      <section className="container sectionPadding">
         <div className="overflow-x-auto mb-4">
           <table className="w-full border border-gray-200">
             <thead className="bg-gray-100">
@@ -62,19 +32,20 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              {cartItems.map((item) => (
+              {cartProducts.map((item) => (
                 <tr
                   key={item.id}
                   className="border-t border-gray-200 text-center"
                 >
                   <td className="p-3">
                     <img
+                      loading="lazy"
                       src={item.image}
-                      alt={item.name}
-                      className="w-16 h-16 mx-auto"
+                      alt={item.title}
+                      className="w-20 h-20 mx-auto"
                     />
                   </td>
-                  <td className="p-3 font-semibold">{item.name}</td>
+                  <td className="p-3 font-semibold">{item.title}</td>
                   <td className="p-3 text-main-clr">
                     {item.originalPrice && (
                       <div className="text-gray-400 line-through text-sm">
@@ -120,10 +91,7 @@ const Cart = () => {
           </table>
         </div>
 
-        <Link
-          to={"/checkout"}
-          className="bg-main-clr text-white text-lg px-6 py-2 hover:bg-white hover:text-main-clr border border-main-clr transition cursor-pointer block w-fit"
-        >
+        <Link to={"/checkout"} className="mainBtn block w-fit">
           اتمام الشراء
         </Link>
       </section>

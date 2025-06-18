@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 const ModalContainer = ({ openModal, setOpenModal, children, title }) => {
   return (
     <section
-      className={`fixed z-50 top-0 end-0 w-full h-screen bg-black/30 flex items-center justify-center transition-opacity duration-300 px-4 py-8 ${
+      className={`fixed z-50 top-0 end-0 w-full h-screen bg-black/30 flex items-center justify-center transition-opacity duration-300 px-4 sectionPadding ${
         openModal ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
       onClick={() => setOpenModal(false)}

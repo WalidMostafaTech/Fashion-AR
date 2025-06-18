@@ -4,13 +4,15 @@ import { FaFacebookF, FaPhone, FaPinterestP, FaTwitter } from "react-icons/fa";
 import { navLinks } from "../../../data/data";
 import { Link } from "react-router-dom";
 import { AiFillInstagram } from "react-icons/ai";
+import MainBtn from "../../common/MainBtn";
 
 const Footer = () => {
   return (
-    <footer className="bg-stone-900 text-white">
-      <div className="container py-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <footer className="bg-stone-900 text-white flex-1">
+      <div className="container sectionPadding grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="space-y-4">
           <img
+            loading="lazy"
             src={logoImg}
             alt="logo"
             className="w-34 brightness-0 invert-100"
@@ -55,7 +57,7 @@ const Footer = () => {
           <p>لا تفوت أي شيء من المتجر عبر الاشتراك في نشرتنا البريدية.</p>
 
           <form
-            className="flex items-center flex-wrap gap-2"
+            className="flex flex-wrap gap-2"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
@@ -63,12 +65,7 @@ const Footer = () => {
               placeholder="ادخل البريد الالكتروني"
               className="bg-white border-none text-black px-2 py-2 outline-none"
             />
-            <button
-              type="submit"
-              className="bg-main-clr text-white px-4 py-2 border-2 border-main-clr hover:bg-white hover:text-main-clr duration-300 cursor-pointer"
-            >
-              اشتراك
-            </button>
+            <MainBtn text={"اشتراك"} />
           </form>
 
           <ul className="flex items-center gap-4">

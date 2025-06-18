@@ -15,7 +15,7 @@ const TeamSection = () => {
   });
 
   return (
-    <section className="container py-8">
+    <section className="container sectionPadding">
       <GlobalTitle title={"أعضاء فريق"} />
 
       <Swiper
@@ -38,6 +38,7 @@ const TeamSection = () => {
             <div className="bg-gray-100 space-y-2 p-2">
               <div className="overflow-hidden">
                 <img
+                  loading="lazy"
                   src={item.img}
                   alt=""
                   className="w-full h-full object-cover"

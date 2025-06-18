@@ -17,7 +17,7 @@ const Blog = () => {
         ]}
       />
 
-      <section className="container py-8">
+      <section className="container sectionPadding">
         <BlogList blogs={blogList} />
 
         <Pagination

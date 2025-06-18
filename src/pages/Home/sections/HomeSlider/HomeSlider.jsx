@@ -7,12 +7,31 @@ import homeSliderImg from "../../../../assets/images/slider-img.png";
 
 const HomeSlider = () => {
   return (
-    <Swiper navigation={true} modules={[Navigation]} loop={true} className="homeSlider">
+    <Swiper
+      navigation={true}
+      modules={[Navigation]}
+      loop={true}
+      className="homeSlider"
+    >
       <SwiperSlide>
-        <div className="h-[300px] xl:h-[800px]"><img src={homeSliderImg} alt="" className="w-full h-full object-cover" /></div>
+        <div className="h-[300px] xl:h-[800px]">
+          <img
+            loading="lazy"
+            src={homeSliderImg}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="h-[300px] xl:h-[800px]"><img src={homeSliderImg} alt="" className="w-full h-full object-cover" /></div>
+        <div className="h-[300px] xl:h-[800px]">
+          <img
+            loading="lazy"
+            src={homeSliderImg}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
       </SwiperSlide>
     </Swiper>
   );

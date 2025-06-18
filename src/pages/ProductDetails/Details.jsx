@@ -121,21 +121,25 @@ const Details = () => {
               </h3>
               <div className="flex flex-wrap gap-2">
                 <img
+                  loading="lazy"
                   src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
                   alt="Visa"
                   className="h-6"
                 />
                 <img
+                  loading="lazy"
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
                   alt="PayPal"
                   className="h-6"
                 />
                 <img
+                  loading="lazy"
                   src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
                   alt="Visa"
                   className="h-6"
                 />
                 <img
+                  loading="lazy"
                   src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
                   alt="PayPal"
                   className="h-6"

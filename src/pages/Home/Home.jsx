@@ -13,7 +13,7 @@ const Home = () => {
     <section>
       <HomeSlider />
 
-      <section className="container py-12">
+      <section className="container sectionPadding">
         <GlobalTitle
           title={"أحدث الإصدارات"}
           subtitle={"عرض خاص"}
@@ -23,10 +23,15 @@ const Home = () => {
       </section>
 
       <section>
-        <img src={bannerImg} alt="" className="w-full h-full object-cover" />
+        <img
+          loading="lazy"
+          src={bannerImg}
+          alt=""
+          className="w-full h-full object-cover"
+        />
       </section>
 
-      <section className="container py-12">
+      <section className="container sectionPadding">
         <GlobalTitle title={"كاجوال يومي"} subtitle={"منتجات حصرية"} />
         <ProductList products={productsList.slice(0, 4)} />
       </section>

@@ -12,10 +12,12 @@ const BlogDetails = () => {
         ]}
       />
 
-      <section className="container py-8 space-y-4">
-        <img src={blogImg} alt="" />
+      <section className="container sectionPadding space-y-4">
+        <img loading="lazy" src={blogImg} alt="" />
 
-        <h1 className="text-2xl font-semibold mb-2">ارتقِ بمساحتك: فن التأثيث الأنيق!</h1>
+        <h1 className="text-2xl font-semibold mb-2">
+          ارتقِ بمساحتك: فن التأثيث الأنيق!
+        </h1>
         <div className="flex items-center gap-2">
           <p className="text-gray-600">07 مايو 2024 09:45:ص</p>
           <p className="text-gray-600 ps-2 border-s-2 border-gray-200">

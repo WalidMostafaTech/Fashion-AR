@@ -1,7 +1,7 @@
 import { useState } from "react";
-import productImg1 from "../../../assets/images/product1.png";
-import productImg2 from "../../../assets/images/product2.png";
-import productImg3 from "../../../assets/images/product3.png";
+import productImg1 from "../../assets/images/product1.png";
+import productImg2 from "../../assets/images/product2.png";
+import productImg3 from "../../assets/images/product3.png";
 
 const Colors = () => {
   const [selectedColor, setSelectedColor] = useState(0);
@@ -22,6 +22,7 @@ const Colors = () => {
       <div className="flex justify-center gap-2">
         {colors.map((color, index) => (
           <img
+            loading="lazy"
             key={index}
             src={color.src}
             alt={color.alt}

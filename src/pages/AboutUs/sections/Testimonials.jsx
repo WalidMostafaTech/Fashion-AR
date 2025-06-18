@@ -17,7 +17,7 @@ const Testimonials = () => {
   });
   return (
     <section className="bg-gray-100">
-      <div className="container py-8">
+      <div className="container sectionPadding">
         <GlobalTitle title={"ماذا يقول الناس"} subtitle={"أحدث الشهادات"} />
 
         <Swiper
@@ -38,6 +38,7 @@ const Testimonials = () => {
                 <div>
                   <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-300">
                     <img
+                      loading="lazy"
                       src={item.img}
                       alt=""
                       className="w-full h-full object-cover"

@@ -15,8 +15,8 @@ const AboutUs = () => {
         ]}
       />
 
-      <section className="container py-8 flex flex-col gap-4">
-        <img src={bannerImg} alt="" />
+      <section className="container sectionPadding flex flex-col gap-4">
+        <img loading="lazy" src={bannerImg} alt="" />
         <h3 className="text-2xl font-semibold">
           من أين ينبع هذا الخطأ الذي يؤدي إلى توجيه اللوم والثناء للمتهمين دون
           وجه حق

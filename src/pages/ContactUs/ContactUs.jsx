@@ -2,6 +2,9 @@ import { FaFax, FaPhone } from "react-icons/fa";
 import BreadCrumb from "../../components/common/BreadCrumb";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
+import FormContainer from "../../components/common/form/FormContainer";
+import FormInput from "../../components/common/form/FormInput";
+import MainBtn from "../../components/common/MainBtn";
 
 const ContactUs = () => {
   return (
@@ -14,7 +17,7 @@ const ContactUs = () => {
         ]}
       />
 
-      <section className="container py-8 grid xl:grid-cols-3 gap-4">
+      <section className="container sectionPadding grid xl:grid-cols-3 gap-4">
         <div className="text-center xl:text-start">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">تواصل معنا</h2>
           <p className=" text-gray-600">
@@ -23,59 +26,26 @@ const ContactUs = () => {
           </p>
         </div>
 
-        <div className="bg-gray-100 p-6 md:p-10 xl:col-span-2">
-          <form className="space-y-4 w-full">
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-1">الاسم الكامل</label>
-                <input
-                  type="text"
-                  placeholder="الاسم الكامل"
-                  className="w-full p-2 bg-white outline-0"
-                />
-              </div>
-              <div>
-                <label className="block mb-1">رقم الهاتف</label>
-                <input
-                  type="text"
-                  placeholder="أدخل رقم هاتفك"
-                  className="w-full p-2 bg-white outline-0"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block mb-1">البريد الإلكتروني</label>
-                <input
-                  type="email"
-                  placeholder="البريد الإلكتروني"
-                  className="w-full p-2 bg-white outline-0"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block mb-1">الموضوع</label>
-                <input
-                  type="text"
-                  placeholder="الموضوع"
-                  className="w-full p-2 bg-white outline-0"
-                />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block mb-1">اكتب رسالتك</label>
-                <textarea
-                  rows="5"
-                  placeholder="اكتب رسالتك هنا"
-                  className="w-full p-2 bg-white outline-0 max-h-56 min-h-36"
-                ></textarea>
-              </div>
+        <div className="xl:col-span-2">
+          <FormContainer>
+            <FormInput label={"الاسم الكامل"} />
+            <FormInput label={"رقم الهاتف"} />
+            <div className="md:col-span-2">
+              <FormInput label={"البريد الإلكتروني"} type="email" />
+            </div>
+            <div className="md:col-span-2">
+              <FormInput label={"الموضوع"} />
+            </div>
+            <div className="md:col-span-2">
+              <FormInput label={"اكتب رسالتك"} type="textarea" />
             </div>
 
-            <button className="bg-main-clr text-white text-lg px-6 py-2 hover:bg-white hover:text-main-clr border border-main-clr transition cursor-pointer">
-              أرسل رسالتك
-            </button>
-          </form>
+            <MainBtn text={"أرسل رسالتك"} />
+          </FormContainer>
         </div>
       </section>
 
-      <section className="container py-8 grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+      <section className="container sectionPadding grid md:grid-cols-2 xl:grid-cols-4 gap-4">
         <div className="bg-gray-100 p-4 rounded flex items-center gap-2">
           <span className="p-2 bg-white text-3xl text-main-clr">
             <FaPhone />

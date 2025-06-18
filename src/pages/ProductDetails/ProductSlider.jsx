@@ -6,9 +6,9 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { useState } from "react";
 import "./ProductSlider.css";
-import productImg1 from "../../../assets/images/product1.png";
-import productImg2 from "../../../assets/images/product2.png";
-import productImg3 from "../../../assets/images/product3.png";
+import productImg1 from "../../assets/images/product1.png";
+import productImg2 from "../../assets/images/product2.png";
+import productImg3 from "../../assets/images/product3.png";
 
 const ProductSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -26,13 +26,13 @@ const ProductSlider = () => {
         className="swiper2"
       >
         <SwiperSlide>
-          <img src={productImg1} />
+          <img loading="lazy" src={productImg1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImg2} />
+          <img loading="lazy" src={productImg2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImg3} />
+          <img loading="lazy" src={productImg3} />
         </SwiperSlide>
       </Swiper>
       <Swiper
@@ -45,13 +45,13 @@ const ProductSlider = () => {
         className="swiper1"
       >
         <SwiperSlide>
-          <img src={productImg1} />
+          <img loading="lazy" src={productImg1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImg2} />
+          <img loading="lazy" src={productImg2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImg3} />
+          <img loading="lazy" src={productImg3} />
         </SwiperSlide>
       </Swiper>
     </section>

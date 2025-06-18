@@ -1,36 +1,7 @@
 import BreadCrumb from "../../components/common/BreadCrumb";
-import ProductImg1 from "../../assets/images/product1.png";
-import ProductImg2 from "../../assets/images/product2.png";
-import ProductImg3 from "../../assets/images/product3.png";
+import { cartProducts } from "../../data/data";
 
 const Checkout = () => {
-  const cartItems = [
-    {
-      id: 1,
-      name: "مقدد برتقالي",
-      price: 15.0,
-      quantity: 1,
-      image: ProductImg1,
-      discount: null,
-    },
-    {
-      id: 2,
-      name: "ذرت كارجرتان",
-      price: 9.96,
-      quantity: 3,
-      image: ProductImg2,
-      originalPrice: 12.0,
-      discount: "وفر: 2.04$",
-    },
-    {
-      id: 3,
-      name: "مقدد رياضي (ابي)",
-      price: 20.0,
-      quantity: 5,
-      image: ProductImg3,
-      discount: null,
-    },
-  ];
   return (
     <article>
       <BreadCrumb
@@ -41,7 +12,7 @@ const Checkout = () => {
         ]}
       />
 
-      <section className="container py-8">
+      <section className="container sectionPadding">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* قسم العناوين وخيارات التوصيل والدفع */}
           <div className="lg:col-span-2 space-y-6">
@@ -179,19 +150,20 @@ const Checkout = () => {
               <div className="bg-gray-100 p-4 shadow rounded">
                 <h2 className="font-bold text-lg mb-3">ملخص الطلب</h2>
                 <div className="space-y-2">
-                  {cartItems.map((item) => (
+                  {cartProducts.map((item) => (
                     <div
                       key={item.id}
                       className="flex justify-between items-center"
                     >
                       <div className="flex items-center gap-2">
                         <img
+                          loading="lazy"
                           src={item.image}
-                          alt={item.name}
+                          alt={item.title}
                           className="w-14"
                         />
                         <div>
-                          <p>{item.name}</p>
+                          <p>{item.title}</p>
                           <p className="flex gap-2">
                             <span>{item.price} $</span>
                             <span>X</span>
@@ -220,9 +192,7 @@ const Checkout = () => {
                       placeholder="ادخل رمز الخصم"
                       className="flex-grow border border-gray-200 px-2 py-1 bg-white outline-0"
                     />
-                    <button className="bg-main-clr text-white text-lg px-6 py-2 hover:bg-white hover:text-main-clr border border-main-clr transition cursor-pointer">
-                      تطبيق الرمز
-                    </button>
+                    <button className="mainBtn">تطبيق الرمز</button>
                   </div>
                 </div>
 
@@ -248,9 +218,7 @@ const Checkout = () => {
                     <span className="text-main-clr">$30.71</span>
                   </div>
                 </div>
-                <button className="mt-4 w-full bg-main-clr text-white text-lg px-6 py-2 hover:bg-white hover:text-main-clr border border-main-clr transition cursor-pointer">
-                  تأكيد الطلب
-                </button>
+                <button className="mainBtn mt-4 w-full">تأكيد الطلب</button>
               </div>
             </div>
           </div>

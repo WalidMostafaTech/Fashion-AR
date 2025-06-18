@@ -1,42 +1,56 @@
 import { BsArrowRepeat } from "react-icons/bs";
 import { FaRegEye, FaStar } from "react-icons/fa";
 import { FiHeart, FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const ProductItem = ({ product }) => {
+  const [isTouched, setIsTouched] = useState(false);
+
   return (
-    <div className="border border-gray-200 p-2 space-y-2 group">
+    <div
+      className={`border border-gray-200 p-2 space-y-2 group`}
+      onMouseEnter={() => setIsTouched(true)}
+      onMouseLeave={() => setIsTouched(false)}
+      onFocus={() => setIsTouched(true)}
+    >
       <div className="relative">
-        <img src={product.image} alt={product.title} />
+        <img loading="lazy" src={product.image} alt={product.title} />
 
         <div className="absolute inset-0 p-2 flex flex-col justify-between">
           <div className="space-y-2">
-            <button
-              className="bg-white text-main-clr text-lg lg:text-xl flex items-center justify-center w-8 h-8 
-            rounded-full cursor-pointer relative z-10"
-            >
+            <button className="bg-white text-main-clr text-xl flex items-center justify-center w-9 h-9 rounded-full cursor-pointer relative z-10">
               <FiHeart />
             </button>
+
+            {/* كل زرار نضيف له isTouched كبديل للhover */}
             <button
-              className="bg-white text-main-clr text-lg lg:text-xl flex items-center justify-center w-8 h-8 
-                    rounded-full cursor-pointer -translate-y-6
-                    opacity-0 group-hover:opacity-100 group-hover:-translate-y-0 
-                    transition-all duration-500 delay-100"
+              className={`bg-white text-main-clr text-xl flex items-center justify-center w-9 h-9 
+              rounded-full cursor-pointer -translate-y-6 opacity-0 
+              transition-all duration-500 delay-100 
+              ${isTouched ? "opacity-100 translate-y-0" : ""}
+              group-hover:opacity-100 group-hover:translate-y-0`}
             >
               <FiShoppingCart />
             </button>
-            <button
-              className="bg-white text-main-clr text-lg lg:text-xl flex items-center justify-center w-8 h-8 
-                    rounded-full cursor-pointer -translate-y-6
-                    opacity-0 group-hover:opacity-100 group-hover:-translate-y-0 
-                    transition-all duration-500 delay-200"
+
+            <Link
+              to={"/product-details"}
+              className={`bg-white text-main-clr text-xl flex items-center justify-center w-9 h-9 
+              rounded-full cursor-pointer -translate-y-6 opacity-0 
+              transition-all duration-500 delay-200 
+              ${isTouched ? "opacity-100 translate-y-0" : ""}
+              group-hover:opacity-100 group-hover:translate-y-0`}
             >
               <FaRegEye />
-            </button>
+            </Link>
+
             <button
-              className="bg-white text-main-clr text-lg lg:text-xl flex items-center justify-center w-8 h-8 
-                    rounded-full cursor-pointer -translate-y-6
-                    opacity-0 group-hover:opacity-100 group-hover:-translate-y-0 
-                    transition-all duration-500 delay-300"
+              className={`bg-white text-main-clr text-xl flex items-center justify-center w-9 h-9 
+              rounded-full cursor-pointer -translate-y-6 opacity-0 
+              transition-all duration-500 delay-300 
+              ${isTouched ? "opacity-100 translate-y-0" : ""}
+              group-hover:opacity-100 group-hover:translate-y-0`}
             >
               <BsArrowRepeat />
             </button>
@@ -49,9 +63,12 @@ const ProductItem = ({ product }) => {
         </div>
       </div>
 
-      <h3 className="text-lg lg:text-2xl font-medium line-clamp-1">
+      <Link
+        to={"/product-details"}
+        className="text-lg lg:text-2xl font-medium line-clamp-1"
+      >
         {product.title}
-      </h3>
+      </Link>
       <p className="text-gray-600 line-clamp-2">{product.description}</p>
 
       {product.offer ? (

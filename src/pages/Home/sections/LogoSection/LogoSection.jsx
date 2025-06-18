@@ -45,7 +45,7 @@ const LogoSection = () => {
           ],
           (img, index) => (
             <SwiperSlide key={index}>
-              <img src={img} alt="" className="mx-auto" />
+              <img loading="lazy" src={img} alt="" className="mx-auto" />
             </SwiperSlide>
           )
         )}
