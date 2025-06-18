@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --green-clr: #1c4d2b;
+  --text-clr: black;
+  --bg-clr: white;
+}
+
+.dark-mode {
+  --green-clr: #1c4d2b;
+  --text-clr: white;
+  --bg-clr: black;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer components {
+  .nav-link {
+    @apply text-lg lg:text-xl duration-300 ease-in-out;
+
+    &.active,
+    &:hover {
+      @apply text-main-clr;
+    }
+  }
+}
+
+@theme {
+  --color-main-clr: var(--green-clr);
+  --color-text-clr: var(--text-clr);
+  --color-bg-clr: var(--bg-clr);
+}
+
+body {
+  font-family: "Tajawal", serif;
+}
