@@ -40,12 +40,14 @@ const HeaderRight = ({ setOpenSearch, setOpenCart }) => {
           }`}
         >
           <Link
+          onClick={() => setShowUserMenu(false)}
             to="/login"
             className="block text-lg text-center p-2 hover:text-main-clr duration-300"
           >
             تسجيل الدخول
           </Link>
           <Link
+          onClick={() => setShowUserMenu(false)}
             to="/register"
             className="block text-lg text-center p-2 hover:text-main-clr duration-300"
           >

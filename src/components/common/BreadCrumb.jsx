@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const BreadCrumb = ({ title, links }) => {
   return (
     <div className="bg-gray-100 p-4 flex flex-col items-center">
-      <h1 className="text-2xl font-semibold mb-2">{title}</h1>
+      <h1 className="text-3xl lg:text-5xl font-semibold mb-2 lg:mb-4">{title}</h1>
       <ul className="text-sm text-gray-600 flex items-center gap-1">
         {links.map((link, index) => (
           <li key={index} className="flex items-center text-lg">
