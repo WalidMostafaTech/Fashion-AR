@@ -10,8 +10,8 @@ const SearchModal = ({ openModal, setOpenModal }) => {
       setOpenModal={setOpenModal}
       title={"البحث فى المتجر"}
     >
-      <div className="w-full p-2 border border-gray-300 rounded-md flex items-center">
-        <span className="text-3xl px-2 border-e border-gray-200">
+      <div className="w-full p-2 border border-gray-clr2 rounded-md flex items-center">
+        <span className="text-3xl px-2 border-e border-gray-clr2">
           <GoSearch />
         </span>
         <input

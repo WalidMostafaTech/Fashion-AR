@@ -16,7 +16,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       {/* Next button */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
-        className="w-10 h-10 border border-gray-200 text-lg flex items-center justify-center cursor-pointer transition hover:bg-main-clr hover:text-white"
+        className="w-10 h-10 border border-gray-clr2 text-lg flex items-center justify-center cursor-pointer transition hover:bg-main-clr hover:text-white"
         disabled={currentPage === 1}
       >
         ❮
@@ -27,7 +27,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         <button
           key={page}
           onClick={() => onPageChange(page)}
-          className={`w-10 h-10 border border-gray-200 text-lg flex items-center justify-center cursor-pointer transition ${
+          className={`w-10 h-10 border border-gray-clr2 text-lg flex items-center justify-center cursor-pointer transition ${
             currentPage === page
               ? "bg-green-900 text-white"
               : "hover:bg-main-clr hover:text-white"
@@ -40,7 +40,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
       {/* Prev button */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
-        className="w-10 h-10 border border-gray-200 text-lg flex items-center justify-center cursor-pointer transition hover:bg-main-clr hover:text-white"
+        className="w-10 h-10 border border-gray-clr2 text-lg flex items-center justify-center cursor-pointer transition hover:bg-main-clr hover:text-white"
         disabled={currentPage === totalPages}
       >
         ❯

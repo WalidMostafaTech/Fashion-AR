@@ -6,15 +6,15 @@ import {
 
 const FilterProduct = ({ setColumns, columns }) => {
   return (
-    <div className="bg-gray-100 p-4 flex items-center justify-between gap-4">
+    <div className="bg-gray-clr p-4 flex items-center justify-between gap-4">
       <div className="flex items-center gap-4 flex-grow flex-wrap xl:flex-nowrap xl:flex-0">
-        <select className="outline-none bg-white border border-gray-200 p-2 flex-grow">
+        <select className="outline-none bg-white border border-gray-clr2 p-2 flex-grow">
           <option defaultValue>ترتيب تصاعدى</option>
           <option value="1">ترتيب تنازلى</option>
           <option value="2">السعر من أقل الى أعلى</option>
           <option value="3">السعر من اعلى الى اقل</option>
         </select>
-        <select className="outline-none bg-white border border-gray-200 p-2 flex-grow">
+        <select className="outline-none bg-white border border-gray-clr2 p-2 flex-grow">
           <option defaultValue>10 منتجات</option>
           <option value="1">25 منتجات</option>
           <option value="2">50 منتجات</option>

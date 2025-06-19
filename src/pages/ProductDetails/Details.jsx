@@ -15,19 +15,19 @@ const Details = () => {
 
   return (
     <section className="space-y-2">
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-clr3">
         يُباع بسرعة! 4 أشخاص اشتروا هذا المنتج في سنة الشراء.
       </p>
 
       <h1 className="text-xl font-bold">طقم جيم متناسق (بني)</h1>
       <div className="flex items-center gap-2">
         <span className="text-yellow-500 font-semibold">★ ★ ★ ★ ★</span>
-        <span className="text-sm text-gray-500">20 تقييم</span>
+        <span className="text-sm text-gray-clr3">20 تقييم</span>
       </div>
 
       <p className="text-yellow-500 font-bold text-lg">
         السعر: <span className="text-black">$15.00</span>{" "}
-        <span className="text-sm text-gray-500">شامل جميع الضرائب</span>
+        <span className="text-sm text-gray-clr3">شامل جميع الضرائب</span>
       </p>
 
       <div className="flex gap-2 text-sm cursor-pointer">
@@ -45,7 +45,7 @@ const Details = () => {
       <div>
         <h3
           onClick={() => toggleSection("desc")}
-          className="cursor-pointer font-medium bg-gray-200 p-2 flex justify-between items-center"
+          className="cursor-pointer font-medium bg-gray-clr2 p-2 flex justify-between items-center"
         >
           وصف المنتج
           <TiArrowSortedDown
@@ -64,7 +64,7 @@ const Details = () => {
                 : "0px",
           }}
         >
-          <p className="text-gray-700 mt-2 p-2">
+          <p className="text-gray-clr3 mt-2 p-2">
             "طقم جيم متناسق" يقدم طقماً كاملاً للتمارين لعشاق اللياقة البدنية
             العصريين. يضم هذا الطقم المتناسق كل ما يلزم لحصة تمرين أنيقة وعملية،
             من قمصان مقاومة للرطوبة إلى ليقنز داعم، مما يضمن الراحة والأداء
@@ -76,7 +76,7 @@ const Details = () => {
       <div>
         <h3
           onClick={() => toggleSection("info")}
-          className="cursor-pointer font-medium bg-gray-200 p-2 flex justify-between items-center"
+          className="cursor-pointer font-medium bg-gray-clr2 p-2 flex justify-between items-center"
         >
           معلومات
           <TiArrowSortedDown
@@ -98,14 +98,14 @@ const Details = () => {
         >
           <div className="p-2">
             <h2 className="font-medium text-lg mb-1">معلومات المنتج</h2>
-            <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+            <ul className="list-disc list-inside text-sm text-gray-clr3 space-y-2">
               <li>رمز المنتج (SKU): SP18 (بني)</li>
               <li>السعر: 150 درهم</li>
               <li>الكمية المتبقية: 40 قطعة متوفرة</li>
             </ul>
 
             <h2 className="font-medium text-lg mb-1 mt-4">تفاصيل التوصيل</h2>
-            <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+            <ul className="list-disc list-inside text-sm text-gray-clr3 space-y-2">
               <li className="flex items-center gap-1">
                 <PiVan /> يتم الشحن و التسليم خلال 7 أيام.
               </li>

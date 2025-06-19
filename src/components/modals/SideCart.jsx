@@ -20,7 +20,7 @@ const SideCart = ({ openCart, setOpenCart }) => {
         {cartProducts.map((product) => (
           <div
             key={product.id}
-            className="flex items-center justify-between gap-2 border-b py-4 border-gray-200"
+            className="flex items-center justify-between gap-2 border-b py-4 border-gray-clr2"
           >
             <div className="flex items-center gap-2">
               <img
@@ -31,7 +31,7 @@ const SideCart = ({ openCart, setOpenCart }) => {
               />
               <div className="flex flex-col gap-2">
                 <h3 className="text-xl">{product.title}</h3>
-                <div className="flex items-center gap-2 text-lg text-gray-500">
+                <div className="flex items-center gap-2 text-lg text-gray-clr3">
                   <span>{"$" + product.price}</span>
                   <span>x</span>
                   <span>{product.quantity}</span>
@@ -40,14 +40,14 @@ const SideCart = ({ openCart, setOpenCart }) => {
             </div>
 
             <div className="text-xl grid grid-cols-2 gap-2">
-              <button className="bg-gray-100 border border-gray-200 p-2 cursor-pointer grid place-content-center">
+              <button className="bg-gray-clr border border-gray-clr2 p-2 cursor-pointer grid place-content-center">
                 <MdEdit />
               </button>
-              <button className="bg-gray-100 border border-gray-200 p-2 cursor-pointer grid place-content-center">
+              <button className="bg-gray-clr border border-gray-clr2 p-2 cursor-pointer grid place-content-center">
                 <MdDelete />
               </button>
 
-              <div className="col-span-2 flex items-center gap-4 bg-gray-100 border border-gray-200 p-2">
+              <div className="col-span-2 flex items-center gap-4 bg-gray-clr border border-gray-clr2 p-2">
                 <span className="cursor-pointer">
                   <FiPlus />
                 </span>
@@ -61,7 +61,7 @@ const SideCart = ({ openCart, setOpenCart }) => {
         ))}
       </div>
 
-      <div className="flex flex-col gap-2 p-4 border-t border-gray-200">
+      <div className="flex flex-col gap-2 p-4 border-t border-gray-clr2">
         <div className="flex items-center justify-between text-lg font-medium">
           <span>المجموع</span>
           <span className="text-main-clr">{"$" + 600}</span>

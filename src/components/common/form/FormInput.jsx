@@ -5,7 +5,7 @@ const FormInput = ({ label, type = "text" }) => {
         <label className="block mb-1">{label}</label>
         <textarea
           placeholder={label}
-          className="w-full p-2 bg-white outline-0 border border-gray-200 min-h-44 resize-none"
+          className="w-full p-2 bg-white outline-0 border border-gray-clr2 min-h-44 resize-none"
         ></textarea>
       </div>
     );
@@ -16,7 +16,7 @@ const FormInput = ({ label, type = "text" }) => {
       <input
         type={type}
         placeholder={label}
-        className="w-full p-2 bg-white outline-0 border border-gray-200"
+        className="w-full p-2 bg-white outline-0 border border-gray-clr2"
       />
     </div>
   );

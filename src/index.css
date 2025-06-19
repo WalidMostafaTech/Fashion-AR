@@ -4,12 +4,27 @@
   --green-clr: #1c4d2b;
   --text-clr: black;
   --bg-clr: white;
+  --gray-clr: #f4f4f4;
+  --gray-clr2: #d3d3d3;
+  --gray-clr3: #696969;
 }
 
 .dark-mode {
   --green-clr: #1c4d2b;
   --text-clr: white;
-  --bg-clr: black;
+  --bg-clr: #0e0e0e;
+  --gray-clr: #171717;
+  --gray-clr2: #8b8b8b;
+  --gray-clr3: #8b8b8b;
+}
+
+@theme {
+  --color-main-clr: var(--green-clr);
+  --color-text-clr: var(--text-clr);
+  --color-bg-clr: var(--bg-clr);
+  --color-gray-clr: var(--gray-clr);
+  --color-gray-clr2: var(--gray-clr2);
+  --color-gray-clr3: var(--gray-clr3);
 }
 
 @utility container {
@@ -19,7 +34,7 @@
 
 @layer components {
   .sectionPadding {
-    @apply py-4 lg:py-8
+    @apply py-4 lg:py-8;
   }
 
   .nav-link {
@@ -39,12 +54,6 @@
       @apply bg-white text-main-clr;
     }
   }
-}
-
-@theme {
-  --color-main-clr: var(--green-clr);
-  --color-text-clr: var(--text-clr);
-  --color-bg-clr: var(--bg-clr);
 }
 
 body {

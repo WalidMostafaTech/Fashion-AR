@@ -14,18 +14,18 @@ const colors = ["أزرق", "أخضر", "أحمر", "بيج", "أسود"];
 
 export default function SidebarFilters({ openFilters, setOpenFilters }) {
   const sideFilter = (
-    <aside className="bg-gray-100 p-4 space-y-4 sticky lg:top-4 overflow-y-auto">
+    <aside className="bg-gray-clr p-4 space-y-4 sticky lg:top-4 overflow-y-auto">
       <FilterAccordion title="الفئات">
         {categories.map((item, i) => (
           <label key={i} className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
-              className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
+              className="w-5 h-5 border border-gray-clr3 text-gray-clr text-lg rounded-sm mr-2 
                     peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
-            <span className="text-gray-500 font-semibold peer-checked:text-main-clr">
+            <span className="text-gray-clr3 font-semibold peer-checked:text-main-clr">
               {item}
             </span>
           </label>
@@ -37,12 +37,12 @@ export default function SidebarFilters({ openFilters, setOpenFilters }) {
           <label key={i} className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
-              className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
+              className="w-5 h-5 border border-gray-clr3 text-gray-clr text-lg rounded-sm mr-2 
                     peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
-            <span className="text-gray-500 font-semibold peer-checked:text-main-clr">
+            <span className="text-gray-clr3 font-semibold peer-checked:text-main-clr">
               {item}
             </span>
           </label>
@@ -54,12 +54,12 @@ export default function SidebarFilters({ openFilters, setOpenFilters }) {
           <label key={i} className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox" className="peer hidden" id={`cat-${i}`} />
             <div
-              className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
+              className="w-5 h-5 border border-gray-clr3 text-gray-clr text-lg rounded-sm mr-2 
                     peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
             </div>
-            <span className="text-gray-500 font-semibold peer-checked:text-main-clr">
+            <span className="text-gray-clr3 font-semibold peer-checked:text-main-clr">
               {item}
             </span>
           </label>
@@ -75,7 +75,7 @@ export default function SidebarFilters({ openFilters, setOpenFilters }) {
               id={`rating-${stars}`}
             />
             <div
-              className="w-5 h-5 border border-gray-400 text-gray-100 text-lg rounded-sm mr-2 
+              className="w-5 h-5 border border-gray-clr3 text-gray-clr text-lg rounded-sm mr-2 
                 peer-checked:bg-main-clr transition-colors"
             >
               <MdDone />
@@ -85,13 +85,13 @@ export default function SidebarFilters({ openFilters, setOpenFilters }) {
                 <span
                   key={j}
                   className={`${
-                    j < stars ? "text-yellow-500" : "text-gray-300"
+                    j < stars ? "text-yellow-500" : "text-gray-clr2"
                   } text-xl leading-none`}
                 >
                   ★
                 </span>
               ))}
-              <span className="text-xs text-gray-400 ml-1">({stars}) نجوم</span>
+              <span className="text-xs text-gray-clr3 ml-1">({stars}) نجوم</span>
             </div>
           </label>
         ))}
@@ -100,7 +100,7 @@ export default function SidebarFilters({ openFilters, setOpenFilters }) {
       <FilterAccordion title="السعر">
         <input
           type="text"
-          className="w-full p-2 bg-white border border-gray-300 outline-none"
+          className="w-full p-2 bg-white border border-gray-clr2 outline-none"
         />
       </FilterAccordion>
     </aside>

@@ -9,7 +9,7 @@ const ProductItem = ({ product }) => {
 
   return (
     <div
-      className={`border border-gray-200 p-2 space-y-2 group`}
+      className={`border border-gray-clr2 p-2 space-y-1 group`}
       onMouseEnter={() => setIsTouched(true)}
       onMouseLeave={() => setIsTouched(false)}
       onFocus={() => setIsTouched(true)}
@@ -23,7 +23,6 @@ const ProductItem = ({ product }) => {
               <FiHeart />
             </button>
 
-            {/* كل زرار نضيف له isTouched كبديل للhover */}
             <button
               className={`bg-white text-main-clr text-xl flex items-center justify-center w-9 h-9 
               rounded-full cursor-pointer -translate-y-6 opacity-0 
@@ -69,12 +68,12 @@ const ProductItem = ({ product }) => {
       >
         {product.title}
       </Link>
-      <p className="text-gray-600 line-clamp-2">{product.description}</p>
+      <p className="text-gray-clr3 line-clamp-2">{product.description}</p>
 
       {product.offer ? (
         <div className="flex flex-wrap gap-2 text-sm lg:text-lg font-medium">
           <p>{product.price / (100 / product.offer)} $</p>
-          <p className="line-through text-gray-600">{product.price} $</p>
+          <p className="line-through text-gray-clr3">{product.price} $</p>
           <p className="text-main-clr">خصم {product.offer} %</p>
         </div>
       ) : (

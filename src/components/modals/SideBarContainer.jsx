@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
 const SideBarContainer = ({
@@ -7,6 +8,18 @@ const SideBarContainer = ({
   children,
   dir = "start",
 }) => {
+  useEffect(() => {
+    if (openSideBar) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openSideBar]);
+
   return (
     <aside
       className={`fixed z-50 top-0 end-0 w-full h-[100dvh] bg-black/30 transition-opacity duration-300 ${
@@ -28,7 +41,7 @@ const SideBarContainer = ({
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+        <div className="flex items-center justify-between p-4 border-b border-gray-clr2">
           <h2 className="text-2xl font-bold">{title}</h2>
           <IoClose
             className="text-3xl cursor-pointer"

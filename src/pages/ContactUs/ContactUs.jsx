@@ -4,7 +4,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import FormContainer from "../../components/common/form/FormContainer";
 import FormInput from "../../components/common/form/FormInput";
-import MainBtn from "../../components/common/MainBtn";
 
 const ContactUs = () => {
   return (
@@ -20,14 +19,14 @@ const ContactUs = () => {
       <section className="container sectionPadding grid xl:grid-cols-3 gap-4">
         <div className="text-center xl:text-start">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">تواصل معنا</h2>
-          <p className=" text-gray-600">
+          <p className=" text-gray-clr3">
             نحن هنا لمساعدتك! لا تتردد في التواصل معنا لأي استفسارات أو ملاحظات،
             وسنرد عليك في أقرب وقت ممكن.
           </p>
         </div>
 
         <div className="xl:col-span-2">
-          <FormContainer>
+          <FormContainer onSubmit={(e) => e.preventDefault()}>
             <FormInput label={"الاسم الكامل"} />
             <FormInput label={"رقم الهاتف"} />
             <div className="md:col-span-2">
@@ -40,13 +39,13 @@ const ContactUs = () => {
               <FormInput label={"اكتب رسالتك"} type="textarea" />
             </div>
 
-            <MainBtn text={"أرسل رسالتك"} />
+            <button className="mainBtn">أرسل رسالتك</button>
           </FormContainer>
         </div>
       </section>
 
       <section className="container sectionPadding grid md:grid-cols-2 xl:grid-cols-4 gap-4">
-        <div className="bg-gray-100 p-4 rounded flex items-center gap-2">
+        <div className="bg-gray-clr p-4 rounded flex items-center gap-2">
           <span className="p-2 bg-white text-3xl text-main-clr">
             <FaPhone />
           </span>
@@ -55,7 +54,7 @@ const ContactUs = () => {
             <p className="text-sm">+91 123 456 7890</p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded flex items-center gap-2">
+        <div className="bg-gray-clr p-4 rounded flex items-center gap-2">
           <span className="p-2 bg-white text-3xl text-main-clr">
             <FaLocationDot />
           </span>
@@ -64,7 +63,7 @@ const ContactUs = () => {
             <p className="text-sm">مجمع ABC بالعاصمة XYZ من نيويورك</p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded flex items-center gap-2">
+        <div className="bg-gray-clr p-4 rounded flex items-center gap-2">
           <span className="p-2 bg-white text-3xl text-main-clr">
             <IoMdMail />
           </span>
@@ -73,7 +72,7 @@ const ContactUs = () => {
             <p className="text-sm">support@multikart.com</p>
           </div>
         </div>
-        <div className="bg-gray-100 p-4 rounded flex items-center gap-2">
+        <div className="bg-gray-clr p-4 rounded flex items-center gap-2">
           <span className="p-2 bg-white text-3xl text-main-clr">
             <FaFax />
           </span>

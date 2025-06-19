@@ -15,8 +15,9 @@ const Testimonials = () => {
       jop: "مصمم",
     };
   });
+
   return (
-    <section className="bg-gray-100">
+    <section className="bg-gray-clr">
       <div className="container sectionPadding">
         <GlobalTitle title={"ماذا يقول الناس"} subtitle={"أحدث الشهادات"} />
 
@@ -36,7 +37,7 @@ const Testimonials = () => {
             <SwiperSlide key={item.id}>
               <div className="flex flex-col lg:flex-row items-center gap-4">
                 <div>
-                  <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-300">
+                  <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-clr2">
                     <img
                       loading="lazy"
                       src={item.img}
@@ -47,7 +48,7 @@ const Testimonials = () => {
                   <h3 className="text-center mt-3 text-main-clr text-lg font-bold">
                     {item.name}
                   </h3>
-                  <p className="text-center text-gray-600">{item.jop}</p>
+                  <p className="text-center text-gray-clr3">{item.jop}</p>
                 </div>
                 <p className="flex-1">{item.desc}</p>
               </div>

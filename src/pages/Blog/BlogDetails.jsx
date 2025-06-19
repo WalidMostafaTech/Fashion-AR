@@ -5,7 +5,7 @@ const BlogDetails = () => {
   return (
     <article>
       <BreadCrumb
-        title={"المدونه"}
+        title={"تفاصيل المدونه"}
         links={[
           { url: "/", label: "الرئيسية" },
           { url: "/blog", label: "تفاصيل المدونه" },
@@ -19,8 +19,8 @@ const BlogDetails = () => {
           ارتقِ بمساحتك: فن التأثيث الأنيق!
         </h1>
         <div className="flex items-center gap-2">
-          <p className="text-gray-600">07 مايو 2024 09:45:ص</p>
-          <p className="text-gray-600 ps-2 border-s-2 border-gray-200">
+          <p className="text-gray-clr3">07 مايو 2024 09:45:ص</p>
+          <p className="text-gray-clr3 ps-2 border-s-2 border-gray-clr2">
             نشر بواسطة: admin
           </p>
         </div>

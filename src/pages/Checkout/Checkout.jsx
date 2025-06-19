@@ -16,106 +16,103 @@ const Checkout = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* قسم العناوين وخيارات التوصيل والدفع */}
           <div className="lg:col-span-2 space-y-6">
-            {/* عنوان الشحن */}
-            <div className="bg-gray-100 p-4 shadow rounded">
+            <div className="bg-gray-clr p-4 shadow rounded">
               <h2 className="font-bold text-lg mb-3">عنوان الشحن</h2>
               <div className="grid md:grid-cols-2 gap-3">
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
               </div>
             </div>
 
-            {/* عنوان الفوترة */}
-            <div className="bg-gray-100 p-4 shadow rounded">
+            <div className="bg-gray-clr p-4 shadow rounded">
               <h2 className="font-bold text-lg mb-3">عنوان الفوترة</h2>
               <div className="grid md:grid-cols-2 gap-3">
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="shippingAddress" defaultChecked />
                   <div>
                     <h3 className="font-bold text-lg">المنزل الجديد</h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">
                       العنوان الجديد: شارع 53، بجانب مركز صحي
                     </p>
-                    <p className="text-gray-600">الهاتف: 5558563599</p>
+                    <p className="text-gray-clr3">الهاتف: 5558563599</p>
                   </div>
                 </label>
               </div>
             </div>
 
-            {/* خيارات التوصيل */}
-            <div className="bg-gray-100 p-4 shadow rounded">
+            <div className="bg-gray-clr p-4 shadow rounded">
               <h2 className="font-bold text-lg mb-3">خيارات التوصيل</h2>
               <div className="grid md:grid-cols-2 gap-3">
                 <label className="bg-white rounded p-3 flex items-center gap-2 cursor-pointer">
@@ -129,10 +126,9 @@ const Checkout = () => {
               </div>
             </div>
 
-            {/* خيارات الدفع */}
-            <div className="bg-gray-100 p-4 shadow rounded">
-              <h2 className="font-bold mb-3">خيارات الدفع</h2>
-              <ul className="grid grid-cols-2 gap-3 text-gray-700">
+            <div className="bg-gray-clr p-4 shadow rounded">
+              <h2 className="font-bold text-lg mb-3">خيارات الدفع</h2>
+              <ul className="grid grid-cols-2 gap-3 text-gray-clr3">
                 <li>SSLCommerz</li>
                 <li>Flutterwave</li>
                 <li>Paystack</li>
@@ -146,8 +142,8 @@ const Checkout = () => {
 
           {/* قسم ملخص الطلب */}
           <div className="lg:col-span-1">
-            <div className="sticky top-0 space-y-4">
-              <div className="bg-gray-100 p-4 shadow rounded">
+            <div className="sticky top-0 space-y-6">
+              <div className="bg-gray-clr p-4 shadow rounded">
                 <h2 className="font-bold text-lg mb-3">ملخص الطلب</h2>
                 <div className="space-y-2">
                   {cartProducts.map((item) => (
@@ -179,18 +175,18 @@ const Checkout = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-4 shadow rounded">
+              <div className="bg-gray-clr p-4 shadow rounded">
                 <h2 className="font-bold text-lg mb-3">ملخص الفاتورة</h2>
 
                 <div className="mb-2">
                   <p className="font-semibold">رمز الخصم:</p>
-                  <p>HOLIDAY40#</p>
+                  <p className="text-lg">HOLIDAY40#</p>
 
                   <div className="flex gap-2">
                     <input
                       type="text"
                       placeholder="ادخل رمز الخصم"
-                      className="flex-grow border border-gray-200 px-2 py-1 bg-white outline-0"
+                      className="flex-grow border border-gray-clr2 px-2 py-1 bg-white outline-0"
                     />
                     <button className="mainBtn">تطبيق الرمز</button>
                   </div>
@@ -213,7 +209,7 @@ const Checkout = () => {
                     <span>الشحن</span>
                     <span>$5.66</span>
                   </div>
-                  <div className="flex justify-between font-bold pt-2 border-t border-gray-300">
+                  <div className="flex justify-between font-bold pt-2 border-t border-gray-clr2">
                     <span>الإجمالي</span>
                     <span className="text-main-clr">$30.71</span>
                   </div>

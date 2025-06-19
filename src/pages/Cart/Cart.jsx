@@ -20,9 +20,9 @@ const Cart = () => {
 
       <section className="container sectionPadding">
         <div className="overflow-x-auto mb-4">
-          <table className="w-full border border-gray-200">
-            <thead className="bg-gray-100">
-              <tr className="text-sm text-gray-700">
+          <table className="w-full border border-gray-clr2">
+            <thead className="bg-gray-clr">
+              <tr className="text-sm text-gray-clr3">
                 <th className="p-3">الصورة</th>
                 <th className="p-3">اسم المنتج</th>
                 <th className="p-3">السعر</th>
@@ -35,7 +35,7 @@ const Cart = () => {
               {cartProducts.map((item) => (
                 <tr
                   key={item.id}
-                  className="border-t border-gray-200 text-center"
+                  className="border-t border-gray-clr2 text-center"
                 >
                   <td className="p-3">
                     <img
@@ -48,7 +48,7 @@ const Cart = () => {
                   <td className="p-3 font-semibold">{item.title}</td>
                   <td className="p-3 text-main-clr">
                     {item.originalPrice && (
-                      <div className="text-gray-400 line-through text-sm">
+                      <div className="text-gray-clr3 line-through text-sm">
                         ${item.originalPrice.toFixed(2)}
                       </div>
                     )}
@@ -60,27 +60,25 @@ const Cart = () => {
                     )}
                   </td>
                   <td className="p-3">
-                    <div className="flex justify-center items-center gap-2 border border-gray-200 w-fit mx-auto text-xl">
-                      <button className="px-3 py-1 border border-gray-200 cursor-pointer">
-                        -
-                      </button>
-                      <span className="w-8">{item.quantity}</span>
-                      <button className="px-3 py-1 border border-gray-200 cursor-pointer">
-                        +
-                      </button>
+                    <div className="flex justify-center border border-gray-clr2 w-fit mx-auto text-xl">
+                      <button className="px-3 py-1 cursor-pointer">-</button>
+                      <span className="w-10 border-x border-gray-clr2 content-center">
+                        {item.quantity}
+                      </span>
+                      <button className="px-3 py-1 cursor-pointer">+</button>
                     </div>
                   </td>
                   <td className="p-3 font-bold text-main-clr">
                     ${(item.price * item.quantity).toFixed(2)}
                   </td>
                   <td className="p-3">
-                    <button className="font-bold border px-3 py-1 text-xl text-gray-500 cursor-pointer">
+                    <button className="font-bold border border-gray-clr3 px-3 py-1 text-2xl text-gray-clr3 cursor-pointer">
                       ×
                     </button>
                   </td>
                 </tr>
               ))}
-              <tr className="border-t border-gray-200 bg-gray-50">
+              <tr className="border-t border-gray-clr2">
                 <td className="p-3 font-bold">الإجمالي:</td>
                 <td className="p-3 font-bold text-main-clr">
                   ${total.toFixed(2)}

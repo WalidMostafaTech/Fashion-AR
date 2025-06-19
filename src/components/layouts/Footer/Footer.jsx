@@ -4,7 +4,6 @@ import { FaFacebookF, FaPhone, FaPinterestP, FaTwitter } from "react-icons/fa";
 import { navLinks } from "../../../data/data";
 import { Link } from "react-router-dom";
 import { AiFillInstagram } from "react-icons/ai";
-import MainBtn from "../../common/MainBtn";
 
 const Footer = () => {
   return (
@@ -21,15 +20,15 @@ const Footer = () => {
             اكتشف أحدث الاتجاهات واستمتع بتجربة تسوق سلسة مع مجموعاتنا الحصرية.
           </p>
           <ul className="space-y-2">
-            <li className="flex items-center gap-2 text-lg hover:text-gray-400 duration-300">
+            <li className="flex items-center gap-2 text-lg hover:text-gray-clr3 duration-300">
               <IoLocationOutline />
               <p>متجر مالتيكارت التجريبي، الهند 659-345</p>
             </li>
-            <li className="flex items-center gap-2 text-lg hover:text-gray-400 duration-300">
+            <li className="flex items-center gap-2 text-lg hover:text-gray-clr3 duration-300">
               <FaPhone />
               <p>اتصل بنا: 123-456-7898</p>
             </li>
-            <li className="flex items-center gap-2 text-lg hover:text-gray-400 duration-300">
+            <li className="flex items-center gap-2 text-lg hover:text-gray-clr3 duration-300">
               <IoMail />
               <p>البريد الإلكتروني: Support@Multikart.com</p>
             </li>
@@ -44,7 +43,7 @@ const Footer = () => {
               <Link
                 key={link.name}
                 to={link.link}
-                className="hover:text-gray-400 duration-300 block"
+                className="hover:text-gray-clr3 duration-300 block"
               >
                 {link.name}
               </Link>
@@ -65,7 +64,7 @@ const Footer = () => {
               placeholder="ادخل البريد الالكتروني"
               className="bg-white border-none text-black px-2 py-2 outline-none"
             />
-            <MainBtn text={"اشتراك"} />
+            <button className="mainBtn">اشتراك</button>
           </form>
 
           <ul className="flex items-center gap-4">
